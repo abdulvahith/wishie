@@ -1,0 +1,133 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url("../../../images/happy2.jpg");
+    background-size:cover;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 80%;
+    /* margin: 20px auto; */
+}
+
+header {
+   text-align: center;
+}
+
+label{
+  color: #3e2835;
+  font-weight: bold;
+}
+
+h1 {
+   font-size: 45px;
+}
+
+h1, #focusWithin {
+    color: #3e2835;
+}
+
+#focus {
+   color: #4E5251;
+}
+
+h2 {
+   font-size: 22px;
+}
+
+.formsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form1, .form2 {
+  width: 80%;
+  margin: 25px;
+}
+
+form {
+    padding: 20px;
+    background-color: transparent;
+}
+
+input, textarea {
+    display: block;
+    margin: 10px 0 10px 0;
+    border: 1px solid #E1E9EC;
+    padding: 5px;
+    background: transparent;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: blue;
+    opacity: 1; /* Firefox */
+}
+
+textarea {
+    width: 96.5%;
+}
+
+input {
+    margin: 10px 0 20px 0;
+}
+
+input[placeholder], textarea[placeholder] {
+    font-family: 'Lato', sans-serif;
+}
+
+/* :focus style for BOTH form 1 and form 2 */
+input:focus, textarea:focus {
+    border: 2px solid #4E5251;
+}
+
+/* :focus-within style for form 2 */
+.form2 form:focus-within {
+    background: #2EE5C8;
+    border: 2px solid black;;
+}
+
+/*******************codepen button************************/
+.button {
+    /* background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer; */
+}
+
+.button2 {
+    background-color: rgba(0,0,0,0.4);
+    color: rgba(256,256,256,0.7);
+    border:0;
+    border-radius: 15px;
+    display: block;
+    margin: 15px auto;
+    padding: 15px 45px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .3s ease;
+
+    /* &:hover {
+      transition: all .3s ease;
+      background-color: rgba(0,0,0,0.8);
+    } */
+}
+
+.button2:hover {
+  transition: all .3s ease;
+  background-color: rgba(0,0,0,0.8);
+}

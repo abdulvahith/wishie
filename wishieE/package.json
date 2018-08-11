@@ -1,0 +1,11 @@
+{
+  "name": "wishie",
+  "version": "1.0.0",
+  "description": "birthday wish",
+  "main": "indes.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "abdul vahith",
+  "license": "ISC"
+}
