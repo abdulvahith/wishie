@@ -12,33 +12,23 @@ var url = "mongodb://abdul_vahi:Vahi123%24@cluster0-shard-00-00-nuxza.mongodb.ne
 const dbName = 'techcafe';
 
 var bodyParser = require('body-parser')
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
-}));
-app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded());
+// app.use( bodyParser.json() );       // to support JSON-encoded bodies
+// app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+//   extended: true
+// }));
+// app.use(express.json());       // to support JSON-encoded bodies
+// app.use(express.urlencoded());
 
+app.use(express.static('public'));
 
-app.get("/admin", function (request, response) {
-    MongoClient.connect(url, function(err, db) {
-       if (err) throw err;
-        var dbo = db.db(dbName);
-        var existUser=[];
+app.get("/", function (request, response) {
+  console.log(__dirname);
+  response.sendFile(__dirname + '/index.html');
+});
 
-        dbo.collection("studentsRegistration").find({}).toArray(function(err, result) {
-          if (err) throw err;
-          console.log("success");
-          console.log(JSON.stringify(result));
-          var arr = result;
-          var regStds= "";
-          for(var i in arr){
-              regStds += "Name = "+arr[i].name+"| MobileNumber = "+arr[i].number+"| course = "+arr[i].course+"\n";
-          }
-           response.end(regStds);
-          db.close();
-        });
-      });
+app.get("/userform", function (request, response) {
+  console.log(__dirname);
+  response.sendFile(__dirname + '/module/user-form/index.html');
 });
 
 var listener = app.listen(process.env.PORT || 3000, function () {
