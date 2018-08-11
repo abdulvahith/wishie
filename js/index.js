@@ -53,5 +53,7 @@ $("#logIn").click(function() {
 	}
 	console.log(logDtl);
 	$("#l-mail,#l-passwd").val("");
-	alert("clickd")
+	alert("clickd23")
+	window.location.href = '../module/user-form';
+	// window.location.replace("");
 })
