@@ -2,9 +2,15 @@
   "name": "wishie",
   "version": "1.0.0",
   "description": "birthday wish",
-  "main": "indes.js",
+  "dependencies": {
+   "body-parser": "^1.18.2",
+   "express": "^4.16.2",
+   "mongodb": "^3.0.8",
+   "mongodb-stitch": "^3.1.2"
+ },
+  "main": "server.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node server.js"
   },
   "author": "abdul vahith",
   "license": "ISC"
