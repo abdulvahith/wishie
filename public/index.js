@@ -34,7 +34,8 @@ $("#signUp").click(function() {
 	var uPasswd = $("#s-passwd").val();
 	var uGender = $("#s-gender").val();
 	if(uName.length == 0){
-		toastr.error("Please Enter Username");
+		toastr.error("Please Enter Username",'Turtle Bay Resort', {timeOut: 500000});
+
 		$("#s-name").focus();
 		return ;
 	}
@@ -129,7 +130,8 @@ $("#logIn").click(function() {
 			toastr.error("Incorrect Password");
 		else{
 			$("#l-mail,#l-passwd").val("");
-			 window.location.href = '../module/user-form';
+			 // window.location.href = '../module/user-form';
+			  window.location.href = '/userform';
 		}
 	});
 	console.log(logDtl);

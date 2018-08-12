@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>:focus & :focus-within </title>
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="/module/user-form/css/style.css">
 </head>
 <body>
   <!DOCTYPE html>
@@ -19,6 +19,9 @@
   <script src="/js/jquery-3.3.1.min.js"></script>
   <script src="/js/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
   <script src="/module/user-form/js/userform.js"></script>
+
+  <link rel="stylesheet" href="/toastr/toastr.css">
+  <script src="/toastr/toastr.min.js"></script>
 </head>
 
 <body>
@@ -30,17 +33,23 @@
     <section class="formsContainer">
       <div class="form1">
         <!-- <h2 style="margin-top: 0px;">1. A form styled with <span id="focus">:focus</span></h2> -->
-        <form>
-          <label for="firstName">*Wish with intro</label>
-          <input type="text" id="intro" style="width: 95%;" maxlength="50" required placeholder="ex : Hey my dear loved one ,  Happy birthday macha">
+        <form id="bday_form">
+          <label for="firstName">*From(Your Name)</label>
+          <input type="text" name="firstName" id="firstName" style="width: 95%;" maxlength="20" required placeholder="ex : Jhon Doe">
 
-          <label for="lastName">*Summary</label>
-          <input type="text" style="width: 95%;" id="summary" maxlength="100" required placeholder="ex : Every year on your birthday, you get a chance to start new">
+          <label for="head">*Cover Label</label>
+          <input type="text" name="head" id="head" style="width: 95%;" maxlength="50" required placeholder="ex : Jhon Doe">
+
+          <label for="intro">*Wish with intro</label>
+          <input type="text" name="intro" id="intro" style="width: 95%;" maxlength="50" required placeholder="ex : Hey my dear loved one ,  Happy birthday macha">
+
+          <label for="summary">*Summary</label>
+          <input type="text" style="width: 95%;" name="summary" id="summary" maxlength="100" required placeholder="ex : Every year on your birthday, you get a chance to start new">
 
           <label for="message">*Message</label>
           <textarea name="message" id="message" cols="35" rows="10" required placeholder="Type a message..."></textarea>
-            <button class="button2" id="submit_form"> Submit </button>
         </form>
+        <button class="button2" id="submit_form"> Submit </button>
       </div>
 
       <!-- <div class="form2">

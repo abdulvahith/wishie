@@ -21,8 +21,20 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get("/", function (request, response) {
-  console.log(__dirname);
+  console.log(__dirname+ '/index.html');
   response.sendFile(__dirname + '/index.html');
+});
+
+app.get("/userform", function (request, response) {
+  console.log(__dirname + '/module/user-form/index.html');
+  response.sendFile(__dirname + '/public/module/user-form/index.html');
+  // response.end("Haiii");
+});
+
+app.get("/greetingcard", function (request, response) {
+  console.log(__dirname + '/module/user-form/index.html');
+  response.sendFile(__dirname + '/public/module/3d-birthday-card/index.html');
+  // response.end("Haiii");
 });
 
 app.post('/signupDetail', function(req, res) {
@@ -73,10 +85,6 @@ app.post('/userLogin', function(req, res) {
           db.close();
         });
   });
-});
-app.get("/userform", function (request, response) {
-  console.log(__dirname);
-  response.sendFile(__dirname + '/module/user-form/index.html');
 });
 
 var listener = app.listen(process.env.PORT || 3000, function () {

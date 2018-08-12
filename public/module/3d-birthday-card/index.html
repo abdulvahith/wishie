@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <title>birthday card</title>
       <link rel="stylesheet" href="/module/3d-birthday-card/css/style.css">
+      <style rel="stylesheet" href="/js/bootstrap-4.0.0-dist/css/bootstrap.min.css"></style>
+      <script src="/js/jquery-3.3.1.min.js"></script>
+      <script src="/js/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -12,17 +15,12 @@
   <div id="card">
     <div id="card-inside">
       <div class="wrap" style=" border: 2px solid #004b82;">
-        <p>Hey My Dear Macha,</p> <!-- max size 50-->
-        <p>I lost the message inside the card 2 times.. and i realsied i am slow at this :'( </p>  <!-- max size 100-->
-        <p style="font-size: 12.5px;">Listen kid, I want you to be the happiest today.. and i suck at making people happy..This is probably the only gift i can give you, my word..
-        I will be there with you in your heart and soul whenever you seek me.
-          I love you.I lost the message inside the card 2 times.. and i realsied i am slow at this :'(
-		  I lost the message inside the card 2 times.. and i realsied i am slow at this :'(
-		  I lost the message inside the card 2 times.. and i realsied i am slow at this :'( I lost the message inside the
-		  Listen kid, I want you to be the happiest today.. and i suck at making people happy..This is probably the only gift i can give you, my word.. I will be there with you in your heart and soul whenever you seek me. I love you.I lost the message inside the card 2 times.. and i realsied i am slow at this :'( I lost the message inside the card 2 times.. and i realsied i am slow at this :'( I lost the message inside the card 2 times.. and i realsied i am slow at this :'( I lost the message inside the
+        <p id="intro_1"></p> <!-- max size 50-->
+        <p id="intro_2"> </p>  <!-- max size 100-->
+        <p id="intro_3" style="font-size: 12.5px;">
         </p>  <!-- max size 500-->
         <p style="margin-bottom: 0px;">always.</p>
-        <p class="signed" style="margin-top: 0px;">Abdul Vahi</p>
+        <p class="signed" style="margin-top: 0px;" id="sign"></p>
         <!-- <p><a href="http://pandey47.0fees.us/index4.html">NEXT</a></p> -->
 
       </div>
@@ -30,20 +28,13 @@
 
     <div id="card-front">
       <div class="wrap">
-        <h1>Happy Birthday Dear Friend Birthday Dear Frienjd!</h1> <!-- max size 50-->
+        <h1 id="heading"></h1> <!-- max size 50-->
       </div>
       <button id="open">&gt;</button>
       <button id="close">&lt;</button>
     </div>
   </div>
-
-
-
-    <script  src="js/index.js"></script>
-
-
-
-
+    <script  src="/module/3d-birthday-card/js/index.js"></script>
 </body>
 
 </html>
