@@ -22,6 +22,7 @@
 
   <link rel="stylesheet" href="/toastr/toastr.css">
   <script src="/toastr/toastr.min.js"></script>
+    <script src="/blockui/blockui.js"></script>
 </head>
 
 <body>
@@ -38,7 +39,7 @@
           <input type="text" name="firstName" id="firstName" style="width: 95%;" maxlength="20" required placeholder="ex : Jhon Doe">
 
           <label for="head">*Cover Label</label>
-          <input type="text" name="head" id="head" style="width: 95%;" maxlength="50" required placeholder="ex : Jhon Doe">
+          <input type="text" name="head" id="head" style="width: 95%;" maxlength="50" required placeholder="ex : Happy Birthday Dear Friend">
 
           <label for="intro">*Wish with intro</label>
           <input type="text" name="intro" id="intro" style="width: 95%;" maxlength="50" required placeholder="ex : Hey my dear loved one ,  Happy birthday macha">
@@ -47,24 +48,10 @@
           <input type="text" style="width: 95%;" name="summary" id="summary" maxlength="100" required placeholder="ex : Every year on your birthday, you get a chance to start new">
 
           <label for="message">*Message</label>
-          <textarea name="message" id="message" cols="35" rows="10" required placeholder="Type a message..."></textarea>
+          <textarea name="message" id="message" cols="35" rows="10" maxlength="450" required placeholder="Type a message..."></textarea>
         </form>
         <button class="button2" id="submit_form"> Submit </button>
       </div>
-
-      <!-- <div class="form2">
-        <h2>2. A form styled with <span id="focus">:focus</span> AND <span id="focusWithin">:focus-within</span></h2>
-        <form action="POST">
-          <label for="firstName">*First Name</label>
-          <input type="text" id="firstName" name="firstName" required placeholder="Enter First Name">
-
-          <label for="lastName">*Last Name</label>
-          <input type="text" id="lastName" name=" lastName" required placeholder="Enter Last Name">
-
-          <label for="message">*Message</label>
-          <textarea name="message" id="message" cols="35" rows="10" placeholder="Type a message..."></textarea>
-        </form>
-      </div> -->
     </section>
   </div>
 </body>

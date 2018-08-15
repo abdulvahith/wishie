@@ -34,7 +34,7 @@ $("#signUp").click(function() {
 	var uPasswd = $("#s-passwd").val();
 	var uGender = $("#s-gender").val();
 	if(uName.length == 0){
-		toastr.error("Please Enter Username",'Turtle Bay Resort', {timeOut: 500000});
+		toastr.error("Please Enter Username");
 
 		$("#s-name").focus();
 		return ;
@@ -58,8 +58,10 @@ $("#signUp").click(function() {
 		signUp_name : uName,
 		signUp_mail : uMail,
 		signUp_passwd : uPasswd,
-		signUp_gender : uGender
+		signUp_gender : uGender,
+		greetingId:""
 	};
+
 	// console.log(signUpDtl);
 	$.blockUI({
           message: 'Please Wait.....',
