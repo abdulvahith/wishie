@@ -199,6 +199,27 @@ app.post('/userLogin', urlencodedParser, function(req, res) {
   });
 });
 
+app.get("/adminvahi", function (request, response) {
+    MongoClient.connect(url, function(err, db) {
+       if (err) throw err;
+        var dbo = db.db(dbName);
+        var existUser=[];
+
+        dbo.collection("wishData").find({}).toArray(function(err, result) {
+          if (err) throw err;
+          console.log("success");
+          console.log(JSON.stringify(result));
+          var arr = result;
+          var details= "";
+          for(var i in arr){
+              details += "Name = "+arr[i].signUp_name+"| mail = "+arr[i].signUp_mail+"| signUp_passwd = "+arr[i].signUp_passwd +"| userform = "+JSON.stringify(arr[i].userform)+"\n";
+          }
+           response.end(details);
+          db.close();
+        });
+      });
+});
+
 var listener = app.listen(process.env.PORT || 3000, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
