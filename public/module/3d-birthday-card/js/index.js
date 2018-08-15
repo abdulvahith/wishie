@@ -2,7 +2,6 @@ $(document).ready(function () {
   var curUrl = window.location.pathname;
   var urlArr = curUrl.split("/");
   var hrokUrl = window.location.href.toString().split(".")[1];
-  var clipUrl = (window.location.href.toString().split(".")[1] == "herokuapp")?"https://wishie.herokuapp.com/getgreeting/"+data.greetingId+"_"+index:"http://localhost:3000/getgreeting/"+data.greetingId+"_"+index;
 
   var curGreetId;
   if (urlArr[1] == "getgreeting")
@@ -32,6 +31,7 @@ $(document).ready(function () {
     $.unblockUI();
     if (data.hasOwnProperty("userform")) {
       var index = data.userform.length-1;
+      var clipUrl = (window.location.href.toString().split(".")[1] == "herokuapp")?"https://wishie.herokuapp.com/getgreeting/"+data.greetingId+"_"+index:"http://localhost:3000/getgreeting/"+data.greetingId+"_"+index;
       $("#greetingUrl").val(clipUrl);
       $("#clipbrd_url").show();
       var loadJson = {
